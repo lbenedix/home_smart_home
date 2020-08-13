@@ -8,6 +8,25 @@ Because the Wemos only supports analog input up to 3.3V I needed an arduino that
 
 The Arduino reads the voltage coming from the transducer, sends it via Serial Console to the ESP which is then publishing the measurement on a MQTT broker. 
 
+
+After getting all the pieces (some ordered, some bought in the local hardware store) and putting the them together I connected my bike pump to figure out which voltage correlates to which pressure.
+
+![Callibration](pics/callibration.png)
+
+| V   | Bar |
+|-----|-----|
+| 0.5 | 0   |
+| 1.3 | 1   |
+| 2.0 | 2   |
+| 2.7 | 3   |
+| 3.5 | 4   |
+| 4.1 | 5   |
+| 5.0 | 6   |
+
+Trying to remember how math works I came up with the following equation to get the pressure in Bar from the measured voltage:
+
+$bars = 1.358 * voltage - 0.7042$
+
 # Parts List
 
 ## Electronics
