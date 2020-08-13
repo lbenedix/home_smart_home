@@ -47,5 +47,9 @@ Next step was putting into the System and creating a Grafana Dashboard.
 * [T-Piece 3/8"](https://www.db-shop24.de/T-Stueck-mit-Aussen-/Innen-/Innengewinde-Messing-vernickelt-3/8-Zoll)
 * [Ball Valve](https://www.db-shop24.de/Minikugelhahn-langer-Griff-Innen-Aussengewinde-G-1-4-PN-15)
 * [Reducer piece 3/8" → 1/4"](https://www.db-shop24.de/Doppelnippel-G-3-8-G-1-4-14571)
+* [Pipe Sealing Cord](https://www.amazon.de/dp/B01F3ABVMM)
 
+## Calibration
+* [Schrader → 1/8" Adapter](https://www.amazon.de/gp/product/B078HPB5NP)
+* [Reducer piece 1/8" → 1/4"](https://www.amazon.de/gp/product/B016Y6O3FQ/)
 
