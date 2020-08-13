@@ -23,7 +23,8 @@ After getting all the pieces (some ordered, some bought in the local hardware st
 | 4.1 | 5   |
 | 5.0 | 6   |
 
-Trying to remember how math works I came up with the following equation to get the pressure in Bar from the measured voltage:
+Trying to remember how math works I came up with the following equation to get the pressure in Bar from the
+ measured voltage:
 
 ![bars = 1.358 * voltage - 0.7042](https://render.githubusercontent.com/render/math?math=bars%20%3D%201.358%20%2A%20voltage%20-%200.7042)
 
