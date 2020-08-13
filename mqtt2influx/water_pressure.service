@@ -1,0 +1,12 @@
+[Unit]
+Description=Water Pressure MQTT --> InfluxDB
+After=multi-user.target
+
+[Service]
+Type=idle
+ExecStart=/home/lbenedix/.local/share/virtualenvs/mqtt2influx-Ykq5JmMN/bin/python /home/lbenedix/home_smart_home/mqtt2influx/water_pressure.py
+Restart=always
+RestartSec=10s
+
+[Install]
+WantedBy=multi-user.target
