@@ -28,10 +28,13 @@ Trying to remember how math works I came up with the following equation to get t
 
 ![bars = 1.358 * voltage - 0.7042](https://render.githubusercontent.com/render/math?math=bars%20%3D%201.358%20%2A%20voltage%20-%200.7042)
 
-Next step was putting into the System
+Next step was putting into the System and creating a Grafana Dashboard.
 
 ![Plumbing](pics/plumbing.png)
+
 ![Installed Sensor](pics/installed.png)
+
+![Grafana](pics/grafana.png)
 
 # Parts List
 
