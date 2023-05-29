@@ -1,0 +1,38 @@
+esphome:
+  name: vindriktning_1
+  platform: ESP8266
+  board: d1_mini
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+
+ota:
+  password: "***"
+
+wifi:
+  ssid: "Happyland"
+  password: "***"
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Vindriktning Fallback Hotspot"
+    password: "***"
+
+captive_portal:
+
+web_server:
+  port: 80
+
+# Ikea Vindriktning PM2.5 sensor
+uart:
+  rx_pin: D2
+  baud_rate: 9600
+
+sensor:
+  - platform: pm1006
+    pm_2_5:
+      name: "Particulate Matter 2.5µm Concentration"
+
