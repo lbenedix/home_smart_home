@@ -1,0 +1,40 @@
+esphome:
+  name: dostmann-conny
+  platform: ESP8266
+  board: d1_mini
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+
+ota:
+  password: "***"
+
+wifi:
+  ssid: "Happyland"
+  password: "***"
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Dostmann-Conny Fallback Hotspot"
+    password: "***"
+
+captive_portal:
+
+web_server:
+  port: 80
+
+sensor:
+  - platform: zyaura
+    clock_pin: D2
+    data_pin: D1
+    co2:
+      name: "CO2 Conny - CO2"
+    temperature:
+      name: "CO2 Conny - Temperature"
+
+  - platform: wifi_signal
+    name: "CO2 Conny - WiFi Signal"
+    update_interval: 60s

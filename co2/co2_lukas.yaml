@@ -1,0 +1,40 @@
+esphome:
+  name: dostmann-lukas
+  platform: ESP8266
+  board: d1_mini
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+
+ota:
+  password: "***"
+
+wifi:
+  ssid: "Happyland"
+  password: "***"
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Dostmann-Lukas Fallback Hotspot"
+    password: "***"
+
+captive_portal:
+
+web_server:
+  port: 80
+
+sensor:
+  - platform: zyaura
+    clock_pin: D2
+    data_pin: D1
+    co2:
+      name: "CO2 Lukas - CO2"
+    temperature:
+      name: "CO2 Lukas - Temperature"
+
+  - platform: wifi_signal
+    name: "CO2 Lukas - WiFi Signal"
+    update_interval: 60s
