@@ -14,16 +14,16 @@ logger:
 api:
 
 ota:
-  password: "***REMOVED***"
+  password: "***"
 
 wifi:
   ssid: "Happyland"
-  password: "***REMOVED***"
+  password: "***"
 
   # Enable fallback hotspot (captive portal) in case wifi connection fails
   ap:
     ssid: "Water Pressure Fallback Hotspot"
-    password: "***REMOVED***"
+    password: "***"
 
 captive_portal:
 
