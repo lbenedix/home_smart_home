@@ -1,0 +1,55 @@
+esphome:
+  includes:
+    - uart_read_line_sensor.h
+  name: water_pressure
+  platform: ESP8266
+  board: d1_mini
+
+# Enable logging
+logger:
+  level: VERBOSE #makes uart stream available in esphome logstream
+  baud_rate: 0 #disable logging over uart
+
+# Enable Home Assistant API
+api:
+
+ota:
+  password: "***REMOVED***"
+
+wifi:
+  ssid: "Happyland"
+  password: "***REMOVED***"
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Water Pressure Fallback Hotspot"
+    password: "***REMOVED***"
+
+captive_portal:
+
+web_server:
+  port: 80
+
+
+uart:
+  id: uart_bus
+  tx_pin: D0
+  rx_pin: D1
+  baud_rate: 9600
+
+sensor: 
+  - platform: wifi_signal
+    name: "Water Pressure - WiFi Signal"
+    update_interval: 60s
+
+
+text_sensor:
+- platform: custom
+  lambda: |-
+    auto my_custom_sensor = new UartReadLineSensor(id(uart_bus));
+    App.register_component(my_custom_sensor);
+    return {my_custom_sensor};
+  text_sensors:
+    id: "uart_readline"
+    name: "Water Pressure"
+
