@@ -37,12 +37,6 @@ uart:
   rx_pin: D1
   baud_rate: 9600
 
-sensor: 
-  - platform: wifi_signal
-    name: "Water Pressure - WiFi Signal"
-    update_interval: 60s
-
-
 text_sensor:
 - platform: custom
   lambda: |-
@@ -51,5 +45,17 @@ text_sensor:
     return {my_custom_sensor};
   text_sensors:
     id: "uart_readline"
-    name: "Water Pressure"
+    name: "Water Pressure [str]"
+
+
+sensor:
+- platform: wifi_signal
+  name: "Water Pressure - WiFi Signal"
+  update_interval: 60s
+
+- platform: template
+  name: "Water Pressure"
+  unit_of_measurement: "bar"
+  accuracy_decimals: 2
+  lambda: return parse_number<float>(id(uart_readline).state);
 
