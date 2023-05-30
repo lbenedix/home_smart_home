@@ -1,3 +1,5 @@
+# https://web.archive.org/web/20230319084859/https://foosel.net/blog/2022-01-03-tfa-dostmann-meets-esphome/
+
 esphome:
   name: dostmann-conny
   platform: ESP8266
