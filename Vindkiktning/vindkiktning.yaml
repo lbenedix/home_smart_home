@@ -1,3 +1,5 @@
+# https://web.archive.org/web/20221203221206/https://style.oversubstance.net/2021/08/diy-use-an-ikea-vindriktning-air-quality-sensor-in-home-assistant-with-esphome/
+
 esphome:
   name: vindriktning_1
   platform: ESP8266
