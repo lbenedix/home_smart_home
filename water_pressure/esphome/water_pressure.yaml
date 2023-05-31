@@ -57,5 +57,6 @@ sensor:
   name: "Water Pressure"
   unit_of_measurement: "bar"
   accuracy_decimals: 2
+  update_interval: 5s
   lambda: return parse_number<float>(id(uart_readline).state);
 
